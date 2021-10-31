@@ -15,11 +15,14 @@ import 'package:evna_flutter/src/utils/loading.dart';
 import 'package:evna_flutter/src/utils/rounded_button.dart';
 import 'package:evna_flutter/src/utils/rounded_input_field.dart';
 import 'package:evna_flutter/src/utils/sharedPreferences.dart';
+import 'package:evna_flutter/src/utils/themes.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import 'mobile_login.dart';
 
 class SignInForm extends StatefulWidget {
   SignInForm({Key? key}) : super(key: key);
@@ -284,11 +287,22 @@ class _SignInFormState extends State<SignInForm> {
                         Row(
                           children: [
                             Spacer(),
-                            Center(
-                              child: new Image.asset(
-                                'assets/images/apple.png',
-                                width: 30,
-                                height: 30,
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (_) => MobileLogin()));
+                              },
+                              child: Center(
+                                child: new Image.asset(
+                                  (Theme.of(context).dialogBackgroundColor ==
+                                          Colors.black)
+                                      ? 'assets/images/Phone_signup_blue.png'
+                                      : 'assets/images/Phone_signup.png',
+                                  width: 30,
+                                  height: 30,
+                                ),
                               ),
                             ),
                             Spacer(),

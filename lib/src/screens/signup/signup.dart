@@ -30,19 +30,6 @@ class _SignUpState extends State<SignUp> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      floatingActionButton: FloatingBtnExtended(
-        text: "sign_in_with_mobile".tr,
-        icon: Icons.phone,
-        action: () {
-          pushNewScreen(
-            context,
-            screen: MobileLogin(),
-            withNavBar: false, // OPTIONAL VALUE. True by default.
-            pageTransitionAnimation: PageTransitionAnimation.sizeUp,
-          );
-        },
-        color: Theme.of(context).primaryColor,
-      ),
       body: Background(
         child: SafeArea(
           child: SingleChildScrollView(
