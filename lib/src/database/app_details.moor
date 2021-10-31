@@ -1,0 +1,6 @@
+-- this is the tables.moor file
+CREATE TABLE todos (
+    id INT,
+    title TEXT,
+    body TEXT
+);

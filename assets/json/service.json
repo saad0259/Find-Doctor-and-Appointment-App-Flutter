@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "evna-fb410",
+  "private_key_id": "e25c493e01bb286b269bc0d442577d94d87f1060",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCZaxRLBSZ2aPFz\nU2bSlptG5IITJepVQhQOm/YopkF/Xu5f1OL7w9Jm8TCwi8mTc54SAprHPj16zCUD\n4tRwSu4+3P+3NlrmrpQtUAObc+LylZVOjd1ZX+avnxy3y14V0awl56My0CcgyIDz\nDPXov1yzkvpayKuzQthB/Y1WVqrskd/gTvkrQvbygy+kyj7Cx8LFWvsNzG7/W69Y\nZG7XjHj236kvWhiSfuDNOktWRUUHEZcVGyZozmAMtpRnPMid+janQ8UqD2oP9DiF\nQTtuvg0ivw1r/+LictWgxx/sfAQRIP0wAFdeSKbLYCQb9b+k8Xu7LTKpn7rzVXaw\n/bngqtzVAgMBAAECgf9ZJJ7l+Fgg9VlWaV+VfW08BAqQlbdTUtHUq0qc0/26xK49\ngLVjFKVsqzhfXNoDk2qFjH3ix4dxkqzvVR2bIe7NGBx9mFe5MjdnHNb7vJph2gin\nXEcBZ3fjE9Db+o7wnqQoYi+xlsEli1th3mYElyyGKyDNH0ylHHIL5gf54uHuEu5n\n2aKQrlL3ABn06/vnZdhhwoRgziN7fhWNjMU5Z4BCSsKL05My8L3bp4HWt8kCIZSJ\nH2P5xCigt7wU0G6Vcm/WJJG7u/jzMDOODi9mLWcXJbGI25Jr1se/mjDTFsZQfvMs\nrLWKw3uRA0s4rdm8lgMtlF0Z2qmiaNSn0W5NOZECgYEAykpr5jelof7pCeWjPvJ9\nENVriBsnHsNypvPK9iguYqUH8bL9ah5Fb1Djwq67mtMOGVf6bcuNe6v/sw3dHRdN\nVGaOEolghh3/9IxNmq9Kk8AtqtHzMucdaEr99ys65RVUVarBCDiQRBOEuJtq9gkg\nckbfo9IaAxEo1/3szZtJpmUCgYEAwibT8ffNtfAILZClKkc+pkTxxi3lZGQg2dj3\nkgdEvrKTRi16KQg0YenNFcoAM36XWHM0o8sFST03VQCoXBrj66kfs7OFqYtHCzDf\nbFXYfoR4zWvsqlazTjTbw8WBfPHeRSE254OP5jzQCycYpZzJS0I8Rq3X33yCuvvz\n8oTJ/bECgYEApQaBb5YF8VnbEs/blQaNMKZqyuYby+T2K2zHLnkpHiAzkuHKCkAX\ntO/wXmndcjirT9GN4vQjv7hZKOEueQUBeNERJd4ceE0Q+Zdb180YseAdYTVViTkx\nrFtBQ9poeWolGp3qS6KZTm/93fwsDfr0FUXsO+Cyh73/6/Sisjj0pGECgYEAoujP\nqNYkf0hEpG8dl8cmM3/gW0lBlSZLRmA/BAIjVdwjpZwdR/bBdXMoCeNwncTYG3i3\nr8R30AeUuTePDZHms2Q63J+DRUs/to0wvAegXDCt6LhpYljTpYjG6pN8XqnYtqrz\nFfoXsbpPWzxX+wb/BK40Q541aCpiy6EEBfgUQVECgYEApDpwLhX3vFNmS8eG/qpr\nPLOPByykNn8ACSAcOWQQTyGj2erVJt8t7HxgVL66Z/wQr6VMfjqX18VswcftbZm/\nwg9Zq8RVEGSKpoXAD1El/9INZVEAAuuHlmh7pPZildSs1q+PUDDtrkDi90BHqN/S\nfQHpK5wMBbA1GtFDXPXt7T8=\n-----END PRIVATE KEY-----\n",
+  "client_email": "evna-dialogflow@evna-fb410.iam.gserviceaccount.com",
+  "client_id": "102026618636664865784",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/evna-dialogflow%40evna-fb410.iam.gserviceaccount.com"
+}

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "292986439596",
+    "project_id": "evna-3092f",
+    "storage_bucket": "evna-3092f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:292986439596:android:cdc5712a3727e2c9ba1c09",
+        "android_client_info": {
+          "package_name": "com.evnacare.evna"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "292986439596-m9ra0jfgln0oeejdnh8r4rf9oi3s77pb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAa7AAfp0whEKsOe3Ezi_mvzatSB49m0Js"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "292986439596-m9ra0jfgln0oeejdnh8r4rf9oi3s77pb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
