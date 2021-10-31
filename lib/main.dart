@@ -12,7 +12,6 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-//cocomo
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   AppInjector.create();
@@ -53,7 +52,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-//saad bai
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({required Key key}) : super(key: key);
@@ -62,11 +60,9 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-//bilal
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Container();
   }
 }
-//saad
