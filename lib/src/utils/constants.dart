@@ -94,4 +94,4 @@ const AGORA_Token =
     '006647a9a710d854a5eb04536bae3b51c0dIAA+QofqbCCiWihAEBYOJZtRf5j2pdQnXTZzsHNAcnAQEChjB08AAAAAEABGxiZqskQhYQEAAQCxRCFh';
 
 const common_user_image =
-    'https://cdn.pixabay.com/photo/2018/08/28/12/41/avatar-3637425_960_720.png';
+    'https://firebasestorage.googleapis.com/v0/b/evna-3092f.appspot.com/o/Default-avatar-blue.png?alt=media&token=842d4a9a-d61c-430d-9323-9029cd4458ad';

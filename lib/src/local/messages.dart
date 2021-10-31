@@ -16,7 +16,6 @@ class Messages extends Translations {
           'change_language': 'Change Language',
           'phone_no': 'Phone Number',
           'type': 'Type',
-
           'add_picture': 'Add Photo',
           'first_name': 'First name',
           'last_name': 'Last name',
@@ -24,7 +23,6 @@ class Messages extends Translations {
           'confirm_pass': 'Confirm password',
           'already_acc_login': 'Already have an account? LOGIN',
           'code_send': 'Code Sent',
-
           'leader_board': 'Leader board',
           'show_more': 'Show More',
           'follow': 'Follow',
@@ -35,28 +33,26 @@ class Messages extends Translations {
           'get_inspired_and__': 'Get inspired and motivate others',
           'group_and_comm': 'Groups & Communities',
           'fight_again_cancer_together': 'Fight against cancer together',
-
           'results': 'Results',
           'map': 'Map',
           'filter': 'Filter',
           'oncologist': 'Oncologist',
           'next_availibility': 'Next availability',
           'discover_the_video_cons': 'Discover the video consultation',
-          'search_a_specialist__': 'Search a specialist of a medical laboratory',
+          'search_a_specialist__':
+              'Search a specialist of a medical laboratory',
           'suggested': 'Suggested',
           'from': 'From',
-          'find_in_franch_special__': 'Find in France a Oncologist (or a professional practicing general medicine) offering online appointment booking',
-
+          'find_in_franch_special__':
+              'Find in France a Oncologist (or a professional practicing general medicine) offering online appointment booking',
           'private_messaging': 'Private messaging',
           'chat_with': 'Chat with',
-
           'my_profile': 'My profile',
           'your_bmi_index__': 'Your BMI index is better than average',
           'very_good': 'Very good',
           'doctor': 'Doctor',
           'patient': 'Doctor',
           'update': 'Update',
-
           'blue': 'Blue',
           'light': 'Light',
           'dark': 'Dark',
@@ -66,6 +62,21 @@ class Messages extends Translations {
           'add_available_time': 'Add Available Time',
           'logout': 'Logout',
           'pathologist': 'Pathologist',
+          'privacy_policy': 'Privacy Policy',
+          'pp_heading1': 'Preamble:',
+          'pp_paragraph1':
+              'Welcome Thank you for visiting our social media page EVNA for the eradication of Cancer. Your privacy is our top priority. To better protect our user’s privacy and making in fool proof we are publishing following terms and conditions and guidelines for all visitors. Evna is a social page for discussing and eradication of cancer menace from world completely. It is our top priority to safeguard the privacy of our social page EVNA visitors and customers.',
+          'pp_heading2': 'Proprietor and copyrights:',
+          'pp_h2i1': 'The EVNA has been created by Hephaistos.',
+          'pp_h2i2':
+              'The EVNA is managing and directing by its owner mentioned in section 2.1 and sole owner of this social page.',
+          'pp_h2i3': 'No one can claim ownership of this page.',
+          'pp_h2i4':
+              'No one is allowed to collect user’s information without the prior permission of admin of EVNA.',
+          'pp_h2i5':
+              'In case of violation of any section, the legal proceedings will be initiated according to prevailing Laws.',
+          'pp_h2i6':
+              'The culprit will be liable to penalty or punishment under cyber crime act or laws of copyrights violation.',
         },
         'fr_FR': {
           'sign_in_with_mobile': 'S’inscrire avec le mobile',
@@ -79,7 +90,6 @@ class Messages extends Translations {
           'enter_your_email': 'Entrer votre Email',
           'change_languge': 'Changer de langue',
           'phone_no': 'Numéro de téléphone',
-
           'add_picture': 'Ajouter une photo',
           'first_name': 'Prénom',
           'last_name': 'Nom',
@@ -88,7 +98,6 @@ class Messages extends Translations {
           'already_acc_login': 'Vous avez déjà un compte? CONNEXION',
           'code_send': 'Code envoyé',
           'type': 'Taper',
-
           'leader_board': 'Classement',
           'show_more': 'Afficher plus',
           'follow': 'Suivre',
@@ -99,21 +108,20 @@ class Messages extends Translations {
           'group_and_comm': 'Groupes et communautés',
           'fight_again_cancer_together': 'Luttons ensemble contre le cancer',
           'discover_people': 'DÉCOUVRIR LES GENS',
-
           'results': 'Résultats',
           'map': 'Carte',
           'filter': 'Filtre',
           'oncologist': 'Oncologue',
           'discover_the_video_cons': 'Découvrez la consultation vidéo',
           'next_availibility': 'Prochaine disponibilité',
-          'search_a_specialist__': 'Rechercher un spécialiste dun laboratoire médical',
+          'search_a_specialist__':
+              'Rechercher un spécialiste dun laboratoire médical',
           'suggested': 'Suggéré',
           'from': 'De',
-          'find_in_franch_special__': 'Trouver à Paris un spécialiste proposant la prise de rendez-vous',
-
+          'find_in_franch_special__':
+              'Trouver à Paris un spécialiste proposant la prise de rendez-vous',
           'private_messaging': 'Messagerie privée',
           'chat_with': 'Parler avec',
-
           'my_profile': 'Mon profil',
           'your_bmi_index__': 'Votre indice IMC est supérieur à la Moyenne',
           'very_good': 'Très bon',
@@ -129,6 +137,21 @@ class Messages extends Translations {
           'add_available_time': 'Ajoutez vos disponibilités',
           'logout': 'Se déconnecter',
           'pathologist': 'Pathologiste',
+          'privacy_policy': ' POLITIQUE DE CONFIDENTIALITÉ',
+          'pp_heading1': 'Préambule:',
+          'pp_paragraph1':
+              "Bienvenue Merci de visiter notre page de médias sociaux EVNA pour l'éradication du cancer. Votre vie privée est notre priorité absolue. Pour mieux protéger la vie privée de nos utilisateurs et rendre infaillible, nous publions les conditions générales et les directives suivantes pour tous les visiteurs. Evna est une page sociale pour discuter et éradiquer complètement la menace du cancer du monde. Notre priorité absolue est de protéger la confidentialité des visiteurs et clients de notre page sociale EVNA.",
+          'pp_heading2': "Propriétaire et droits d'auteur ",
+          'pp_h2i1': "L'EVNA a été créé par Héphaïstos.",
+          'pp_h2i2':
+              "L'EVNA est gérée et dirigée par son propriétaire mentionné à la section 2.1 et seul propriétaire de cette page sociale.",
+          'pp_h2i3': "Personne ne peut revendiquer la propriété de cette page.",
+          'pp_h2i4':
+              "Personne n'est autorisé à collecter les informations de l'utilisateur sans l'autorisation préalable de l'administrateur d'EVNA.",
+          'pp_h2i5':
+              "En cas de violation d'une section, les poursuites judiciaires seront engagées conformément aux lois en vigueur.",
+          'pp_h2i6':
+              "Le coupable sera passible d'une peine ou d'une peine en vertu de la loi sur la cybercriminalité ou des lois sur la violation des droits d'auteur.",
         }
       };
 }

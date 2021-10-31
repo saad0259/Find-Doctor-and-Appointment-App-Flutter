@@ -20,6 +20,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get_utils/src/extensions/internacionalization.dart';
 import 'package:image_picker/image_picker.dart';
+import '../privacy_policy.dart';
 
 class SignUpForm extends StatefulWidget {
   SignUpForm({Key? key}) : super(key: key);
@@ -100,7 +101,7 @@ class _SignUpFormState extends State<SignUpForm> {
                             child: FadeInImage.assetNetwork(
                               placeholder: (imageUrl != "")
                                   ? imageUrl
-                                  : 'assets/images/person.jpeg',
+                                  : 'assets/images/Default-avatar-blue.png',
                               image: (imageUrl != "")
                                   ? imageUrl
                                   : common_user_image,
@@ -192,6 +193,29 @@ class _SignUpFormState extends State<SignUpForm> {
                                   textColor: Theme.of(context).canvasColor,
                                   text: "sign_up".tr,
                                   press: () {
+                                    showModalBottomSheet(
+                                        backgroundColor: Colors.black,
+                                        context: context,
+                                        builder: (context) {
+                                          return Column(
+                                            children: [
+                                              Expanded(
+                                                  child: PrivacyPolicyScreen()),
+                                              TextButton(
+                                                  onPressed: () {
+                                                    Navigator.of(context).pop();
+                                                  },
+                                                  child: Text(
+                                                    'Accept',
+                                                    style: TextStyle(
+                                                      fontSize: 30,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
+                                                  ))
+                                            ],
+                                          );
+                                        });
                                     onSignUpTap();
                                   },
                                   color: Theme.of(context).primaryColor,
