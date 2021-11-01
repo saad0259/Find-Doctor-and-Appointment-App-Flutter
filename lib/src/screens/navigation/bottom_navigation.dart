@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:evna_flutter/src/screens/community/community.dart';
 import 'package:evna_flutter/src/screens/message/message_home.dart';
 import 'package:evna_flutter/src/screens/profile/profile.dart';
@@ -9,7 +11,7 @@ import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 
 class BottomNavigation extends StatefulWidget {
-  BottomNavigation({Key?  key}) : super(key: key);
+  BottomNavigation({Key? key}) : super(key: key);
 
   @override
   _BottomNavigationState createState() => _BottomNavigationState();
@@ -44,25 +46,26 @@ class _BottomNavigationState extends State<BottomNavigation> {
     return [
       PersistentBottomNavBarItem(
         icon: Icon(CupertinoIcons.person_3_fill),
-        title: ("Community"),
         activeColorPrimary: Theme.of(context).selectedRowColor,
         inactiveColorPrimary: CupertinoColors.systemGrey,
       ),
       PersistentBottomNavBarItem(
-        icon: Icon(CupertinoIcons.search),
-        title: ("Search"),
+        icon: Container(
+            height: 2.0,
+            width: 25.0,
+            child: Image.asset(
+              "assets/images/Search-blue.png",
+            )),
         activeColorPrimary: Theme.of(context).selectedRowColor,
         inactiveColorPrimary: CupertinoColors.systemGrey,
       ),
       PersistentBottomNavBarItem(
         icon: Icon(CupertinoIcons.chat_bubble),
-        title: ("Message"),
         activeColorPrimary: Theme.of(context).selectedRowColor,
         inactiveColorPrimary: CupertinoColors.systemGrey,
       ),
       PersistentBottomNavBarItem(
         icon: Icon(CupertinoIcons.person),
-        title: ("Profile"),
         activeColorPrimary: Theme.of(context).selectedRowColor,
         inactiveColorPrimary: CupertinoColors.systemGrey,
       ),
