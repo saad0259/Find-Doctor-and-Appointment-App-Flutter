@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:evna_flutter/src/blocs/post/post_bloc.dart';
 import 'package:evna_flutter/src/blocs/post/post_state.dart';
 import 'package:evna_flutter/src/blocs/user/user_bloc.dart';
@@ -52,111 +53,169 @@ class ParlerUIState extends State<ParlerUI> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(10.0, 0, 10.0, 0),
-      child: Card(
-        clipBehavior: Clip.antiAlias,
-        child: Column(
-          children: [
-            ListTile(
-              title: Text(
-                'parler'.tr,
-                style: TextStyle(
-                  color: Theme.of(context).canvasColor,
-                ),
-              ),
-              trailing: GestureDetector(
-                onTap: () {
-                  pushNewScreen(
-                    context,
-                    screen: ParlerViewUI(userList: userList),
-                    withNavBar: false, // OPTIONAL VALUE. True by default.
-                    pageTransitionAnimation: PageTransitionAnimation.cupertino,
-                  );
-                },
-                child: Text(
-                  'show_more'.tr,
-                  style: TextStyle(
-                    color: Theme.of(context).canvasColor,
+    return Container(
+      height: 400,
+      child: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(10.0, 0, 10.0, 0),
+          child: Card(
+            clipBehavior: Clip.antiAlias,
+            child: Column(
+              children: [
+                ListTile(
+                  title: Text(
+                    'parler'.tr,
+                    style: TextStyle(
+                      color: Theme.of(context).canvasColor,
+                    ),
                   ),
-                ),
-              ),
-            ),
-
-            BlocConsumer<PostBloc, PostState>(
-              bloc: postBloc,
-              listener: (context, state) {
-                state.when(
-                  idle: () {},
-                  loading: () {},
-                  loaded: (data) {
-                    print("object");
-                    postList = data;
-                  },
-                  showError: (err) {},
-                  postSuccessfully: () {
-                    postBloc.fetchPosts();
-                  },
-                );
-              },
-              builder: (context, state) {
-                return Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: List.generate(
-                    postList.length > 5 ? 5 : postList.length,
-                    (index) {
-                      if (postList.length > 0) {
-                        BaseModel model = postList[index];
-                        return GestureDetector(
-                          onLongPress: () {
-                            UserModel userData =
-                                model.items['userBase'] as UserModel;
-                            if (userData.userId == currentUser) {}
-                          },
-                          child: Column(
-                            children: [
-                              buildPostWidget(
-                                model,
-                                ValueKey(model.getObjectId()),
-                              ),
-                            ],
-                          ),
-                        );
-                      } else {
-                        return Container();
-                      }
+                  trailing: GestureDetector(
+                    onTap: () {
+                      pushNewScreen(
+                        context,
+                        screen: ParlerViewUI(userList: userList),
+                        withNavBar: false, // OPTIONAL VALUE. True by default.
+                        pageTransitionAnimation: PageTransitionAnimation.cupertino,
+                      );
                     },
+                    child: Text(
+                      'show_more'.tr,
+                      style: TextStyle(
+                        color: Theme.of(context).canvasColor,
+                      ),
+                    ),
                   ),
-                );
-              },
-            ),
+                ),
 
-            // ListTile(
-            //   leading: CircleAvatar(
-            //     radius: 40,
-            //     backgroundColor: Colors.white,
-            //     child: ClipRRect(
-            //       borderRadius: BorderRadius.all(Radius.circular(250)),
-            //       child: Image.asset(
-            //         'assets/images/person.jpeg',
-            //         fit: BoxFit.cover,
-            //       ),
-            //     ),
-            //   ),
-            //   title: const Text(
-            //     'Sophia Hyes MD',
-            //     style: TextStyle(
-            //       color: Theme.of(context).canvasColor,
-            //     ),
-            //   ),
-            //   subtitle: Text(
-            //     'What are the stages of ....',
-            //     style: TextStyle(
-            //       color: Theme.of(context).canvasColor,
-            //     ),
-            //   ),
-            // ),
-          ],
+                // BlocConsumer<PostBloc, PostState>(
+                //   bloc: postBloc,
+                //   listener: (context, state) {
+                //     state.when(
+                //       idle: () {},
+                //       loading: () {},
+                //       loaded: (data) {
+                //         print("object");
+                //         postList = data;
+                //       },
+                //       showError: (err) {},
+                //       postSuccessfully: () {
+                //         postBloc.fetchPosts();
+                //       },
+                //     );
+                //   },
+                //   builder: (context, state) {
+                //     return Column(
+                //       mainAxisSize: MainAxisSize.min,
+                //       children: [
+                //         // Text('HIIIIIIIIIii'),
+                //       ],
+                //       // List.generate(
+                //       //   postList.length > 5 ? 5 : postList.length,
+                //       //   (index) {
+                //       //     if (postList.length > 0) {
+                //       //       BaseModel model = postList[index];
+                //       //       return GestureDetector(
+                //       //         onLongPress: () {
+                //       //           UserModel userData =
+                //       //               model.items['userBase'] as UserModel;
+                //       //           if (userData.userId == currentUser) {}
+                //       //         },
+                //       //         child: Column(
+                //       //           children: [
+                //       //             buildPostWidget(
+                //       //               model,
+                //       //               ValueKey(model.getObjectId()),
+                //       //             ),
+                //       //           ],
+                //       //         ),
+                //       //       );
+                //       //     } else {
+                //       //       return Container();
+                //       //     }
+                //       //   },
+                //       // ),
+                //     );
+                //   },
+                // ),
+
+                Container(
+                  height: 500,
+                  child: StreamBuilder<QuerySnapshot>(
+                      stream: FirebaseFirestore.instance
+                      .collection('postBase')
+                      // .orderBy('createdAt', descending: true)
+                      .snapshots(),
+                      builder: (ctx, postSnapshot) {
+                    if (postSnapshot.connectionState == ConnectionState.waiting) {
+                      return Center(
+                        child: CircularProgressIndicator(),
+                      );
+                    }
+                    final postDocs = postSnapshot.data?.docs ?? null;
+                    print('--------------Helo ${postDocs!.length}');
+                    return ListView.builder(
+                      reverse: true,
+                      itemCount: postDocs.length,
+                      itemBuilder: (ctx, index) => ListTile(
+                        leading: CircleAvatar(
+                          radius: 40,
+                          backgroundColor: Colors.white,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.all(Radius.circular(250)),
+                            child: FadeInImage.assetNetwork(
+                              placeholder: 'assets/images/Default-avatar-blue.png',
+                              image:
+                                  common_user_image,
+                              // : 'assets/images/person.jpeg',
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                        title: const Text(
+                          'Sophia Hyes MD',
+                          style: TextStyle(
+                            // color: Theme.of(context).primaryColor,
+                          ),
+                        ),
+                        subtitle: Text(
+                          postDocs[index]['message'],
+                          style: TextStyle(
+                            color: Theme.of(context).canvasColor,
+                          ),
+                        ),
+                      ),
+                    );;
+                  }),
+                ),
+
+                // ListTile(
+                //   leading: CircleAvatar(
+                //     radius: 40,
+                //     backgroundColor: Colors.white,
+                //     child: ClipRRect(
+                //       borderRadius: BorderRadius.all(Radius.circular(250)),
+                //       child: Image.asset(
+                //         'assets/images/person.jpeg',
+                //         fit: BoxFit.cover,
+                //       ),
+                //     ),
+                //   ),
+                //   title: const Text(
+                //     'Sophia Hyes MD',
+                //     style: TextStyle(
+                //       // color: Theme.of(context).primaryColor,
+                //     ),
+                //   ),
+                //   subtitle: Text(
+                //     'What are the stages of ....',
+                //     style: TextStyle(
+                //       color: Theme.of(context).canvasColor,
+                //     ),
+                //   ),
+                // ),
+              ],
+            ),
+          ),
         ),
       ),
     );
@@ -311,7 +370,7 @@ class ParlerUIState extends State<ParlerUI> {
   //               ),
   //               Spacer(),
   //               IconButton(
-  //                 icon: Icon(CupertinoIcons.chat_bubble),
+  //                 icon: Icon(CupertinoIcons.post_bubble),
   //                 onPressed: () {},
   //               ),
   //               Spacer(),

@@ -193,6 +193,7 @@ class _SignUpFormState extends State<SignUpForm> {
                                   textColor: Theme.of(context).canvasColor,
                                   text: "sign_up".tr,
                                   press: () {
+                                    FocusScope.of(context).unfocus();
                                     showModalBottomSheet(
                                         backgroundColor: Colors.black,
                                         context: context,
@@ -378,7 +379,7 @@ class _SignUpFormState extends State<SignUpForm> {
 
   late File _imageFile;
   final picker = ImagePicker();
-  var imageUrl = "";
+  var imageUrl = common_user_image;
   bool isUpload = false;
 
   ImageUploadRepository? imageUploadRepo =
